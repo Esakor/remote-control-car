@@ -1,14 +1,17 @@
-input.onButtonPressed(Button.A, function () {
-    radio.setGroup(1)
+input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
+    radio.sendNumber(5)
 })
-input.onSound(DetectedSound.Loud, function () {
-    radio.setGroup(4)
+input.onButtonPressed(Button.A, function () {
+    radio.sendNumber(1)
 })
 input.onButtonPressed(Button.AB, function () {
-    radio.setGroup(3)
+    radio.sendNumber(3)
 })
 input.onButtonPressed(Button.B, function () {
-    radio.setGroup(2)
+    radio.sendNumber(2)
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    radio.sendNumber(4)
 })
 basic.showIcon(IconNames.Ghost)
 radio.setGroup(7)
